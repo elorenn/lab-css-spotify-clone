@@ -1,21 +1,53 @@
 /*
 Colors:
-
-Text: 1A1A1A
-Green: #00B172
-White: #FFF
-
+  Text: 1A1A1A
+  Green: #00B172 (#1ed760)
+  White: #FFF
+Font:
+  Family: Spotify Circular 
+  Also include: Helvetica, Arial, sans-serif
+  Similar to Spotify Circular: 
+    Montserrat, 
+    Gotham Medium, 
+    Raleway, 
+    Proxima Nova, Proxima Sans, 
+    LL Circular
 */
 
+/* font */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400&display=swap');
+
+h1 {
+  font-size: 5em;
+  margin: 0.2em 0;
+}
+
+#hero p {
+  font-size: 1.7em;
+  margin: 0.2em 0;
+}
+
+/* reset */
 html, body {
   margin: 0;
   padding: 0;
 }
 
+body {
+  background: #fff;
+  font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  line-height: 1.5;
+  color: #000;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* temporarily make images small enough to work with */
 img {
   width: 10%;
 }
 
+/* header and nav styling */
 #img-wrapper {
   flex-basis: 20%;
 }
@@ -43,6 +75,7 @@ nav {
   margin-right: 2%;
 }
 
+/* sections styling */
 #info {
   height: 50vh;
 }
@@ -54,8 +87,15 @@ nav {
 #hero {
   background-image: url("../images/landing.jpg");
   background-size: cover;
+  color: #fff;
+  text-align: center;
 }
 
-
+.flex-c {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
 
