@@ -1,7 +1,7 @@
 /*
 Colors:
   Text: 1A1A1A
-  Green: #00B172 (#1ed760)
+  Green: #00B172
   White: #FFF
 Font:
   Family: Spotify Circular 
@@ -14,17 +14,9 @@ Font:
     LL Circular
 */
 
-/* font */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400&display=swap');
-
-h1 {
-  font-size: 5em;
-  margin: 0.2em 0;
-}
-
-#hero p {
-  font-size: 1.7em;
-  margin: 0.2em 0;
+/* temporarily make images small enough to work with */
+img {
+  width: 15%;
 }
 
 /* reset */
@@ -32,6 +24,9 @@ html, body {
   margin: 0;
   padding: 0;
 }
+
+/* font & text */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400&display=swap');
 
 body {
   background: #fff;
@@ -42,9 +37,58 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* temporarily make images small enough to work with */
-img {
-  width: 10%;
+h1 {
+  font-size: 5em;
+  margin: 0.2em 0;
+}
+
+h2 {
+  font-size: 2.5em;
+  font-weight: normal;
+  text-decoration: underline;
+  text-decoration-color: #fff;
+  text-underline-offset: 0.5em;
+}
+
+#info h2 {
+  text-decoration-color: #00B172;
+}
+
+h3 {
+  font-size: 1.5em;
+}
+
+p {
+  width: 50%;
+}
+
+#hero p {
+  font-size: 1.7em;
+  margin: 0.2em 0;
+}
+
+#hero, #example {
+  color: #fff;
+}
+
+#info h3 {
+  color: #00B172;
+}
+
+/* flex rules */
+
+.flex-c {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-r {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
 }
 
 /* header and nav styling */
@@ -77,25 +121,30 @@ nav {
 
 /* sections styling */
 #info {
-  height: 50vh;
+  min-height: 50vh;
+  width: 100vw;
+  text-align: center;
+}
+
+#info img {
+  width: 25%;
 }
 
 #hero,  #example {
   height: 100vh;
+  width: 100vw;
 }
 
 #hero {
   background-image: url("../images/landing.jpg");
   background-size: cover;
-  color: #fff;
   text-align: center;
 }
 
-.flex-c {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.color-container {
+  background-color: #00B172;
 }
 
-
+article {
+  padding: 3em 0;
+}
