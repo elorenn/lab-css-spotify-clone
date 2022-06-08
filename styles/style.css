@@ -6,3 +6,56 @@ Green: #00B172
 White: #FFF
 
 */
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  width: 10%;
+}
+
+#img-wrapper {
+  flex-basis: 20%;
+}
+
+#img-wrapper > img {
+  width: 100%;
+}
+
+header {
+  position:fixed;
+  top: 0;
+  right: 0;
+  background-color: #fff;
+}
+
+.nav-wrapper, nav > ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav {
+  flex-basis: 20%;
+  margin-right: 2%;
+}
+
+#info {
+  height: 50vh;
+}
+
+#hero,  #example {
+  height: 100vh;
+}
+
+#hero {
+  background-image: url("../images/landing.jpg");
+  background-size: cover;
+}
+
+
+
+
