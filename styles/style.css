@@ -113,10 +113,14 @@ nav > ul {
   list-style-type: none;
 }
 
-nav li, a:-webkit-any-link {
+nav li, a, a:-webkit-any-link {
   text-decoration: none;
   color: #000;
   margin: 0 1em;
+}
+
+nav a:hover {
+  color: #00B172;
 }
 
 .nav-wrapper, nav > ul {
