@@ -96,7 +96,8 @@ header {
 }
 
 header .img-wrapper {
-  flex-basis: 15%;
+  flex-basis: 10%;
+  margin: 0 2em;
 }
 
 header .img-wrapper > img {
@@ -115,6 +116,7 @@ nav > ul {
 nav li, a:-webkit-any-link {
   text-decoration: none;
   color: #000;
+  margin: 0 1em;
 }
 
 .nav-wrapper, nav > ul {
@@ -146,10 +148,6 @@ nav li, a:-webkit-any-link {
   width: 25%;
 }
 
-article {
-  padding: 3em 0;
-  width: 100%;
-}
 
 .color-container {
   position: relative;
@@ -157,9 +155,9 @@ article {
   width: 95%;
 }
 
-/* section#example {
-  height: 100vh;
-} */
+section#example {
+  max-height: 90vh;
+}
 
 #example .img-wrapper {
   height: 50%;
