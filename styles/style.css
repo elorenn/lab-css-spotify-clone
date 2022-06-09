@@ -14,15 +14,26 @@ Font:
     LL Circular
 */
 
-/* temporarily make images small enough to work with */
-img {
-  width: 15%;
-}
-
 /* reset */
 html, body {
   margin: 0;
   padding: 0;
+}
+
+/* flex rules */
+
+.flex-c {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-r {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: stretch;
 }
 
 /* font & text */
@@ -75,36 +86,35 @@ p {
   color: #00B172;
 }
 
-/* flex rules */
-
-.flex-c {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.flex-r {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-}
-
 /* header and nav styling */
-#img-wrapper {
-  flex-basis: 20%;
-}
-
-#img-wrapper > img {
-  width: 100%;
-}
-
 header {
-  position:fixed;
+  position: fixed;
+  z-index: 2;
   top: 0;
   right: 0;
   background-color: #fff;
+}
+
+header .img-wrapper {
+  flex-basis: 15%;
+}
+
+header .img-wrapper > img {
+  width: 100%;
+}
+
+nav {
+  flex-basis: 20%;
+  margin-right: 2%;
+}
+
+nav > ul {
+  list-style-type: none;
+}
+
+nav li, a:-webkit-any-link {
+  text-decoration: none;
+  color: #000;
 }
 
 .nav-wrapper, nav > ul {
@@ -114,12 +124,18 @@ header {
   justify-content: space-between;
 }
 
-nav {
-  flex-basis: 20%;
-  margin-right: 2%;
+/* sections styling */
+#hero {
+  background-image: url("../images/landing.jpg");
+  background-size: cover;
+  text-align: center;
 }
 
-/* sections styling */
+#hero {
+  min-height: 100vh;
+  width: 100vw;
+}
+
 #info {
   min-height: 50vh;
   width: 100vw;
@@ -130,21 +146,40 @@ nav {
   width: 25%;
 }
 
-#hero,  #example {
-  height: 100vh;
-  width: 100vw;
-}
-
-#hero {
-  background-image: url("../images/landing.jpg");
-  background-size: cover;
-  text-align: center;
+article {
+  padding: 3em 0;
+  width: 100%;
 }
 
 .color-container {
+  position: relative;
   background-color: #00B172;
+  width: 95%;
 }
 
-article {
-  padding: 3em 0;
+/* section#example {
+  height: 100vh;
+} */
+
+#example .img-wrapper {
+  height: 50%;
+}  
+
+#example img {
+  height: 100%;
+}
+
+.flex-c#image {
+  align-items: stretch;
+}
+
+.flex-c#text {
+  align-items: flex-start;
+}
+
+#example .centered {
+  height: 15%;
+  position: absolute;
+  top: 40%;
+  z-index: 1;
 }
